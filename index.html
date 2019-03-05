@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <title>PG2 Weather App </title>
+</head>
+<body>
+    <div class="container p-4">     <!-- .container.p-4 -->
+        <div class="row">           <!-- .row -->
+            <div class="col-md-4 mx-auto text-center"> <!-- .col-md-4 para ocupar una 3 parte del ancho de pantalla -->
+                <!-- aquí adentro de esta columna vamos a colocar (2) dos tarjetas dos tarjetas 
+                                         .card*2  -->
+
+                <div class="card">  <!--la primera tarjeta será para mostrar la información -->
+
+                    <div class="card-body"> <!-- .card-boby -->
+                        <h1 id="weather-location" class="h3"></h1>   
+                        <!--es decir será un H1 pero va a lucir
+                            como un h 3 y este caso el h1 le da digamos una posición en el SEO (Search Engine Optimization).-->
+                       <h3 id="weather-description" class="h4"></h3>
+                       <h3 id="weather-string"></h3>
+                       <ul class="list-group mt-3">
+                              <!-- li.list-group-item*2 -->
+                           <li id="weather-humidity" class="list-group-item"></li>
+                           <li id="weather-wind" class="list-group-item"></li>
+                          </ul>
+                    </div>   
+                </div>    
+                <div class="card"> <!--segunda será para colocar un formulario -->
+                    <!--    .card-body 
+                    el usuario luego va a querer insertar una nueva ciudad y para eso  vamos a crear 
+                    un formulario entonces la segunda tarjeta será la encargada de hacer eso vamos a que lo
+                    tenía un cargado y aquí adentro vamos a colocar ese
+
+                        form#w-form y borramos action="" (lo vamos hacer con JS)
+                    -->
+
+                    <div class="card-body">
+                        <form id="w-form">
+                            <!-- .form-group -->
+                            <div class="form-group">
+                                <input type="text"  id="city" class="form-control" placeholder="Ciudad" autofocus>
+                            </div>
+
+                            <!-- .form-group -->
+                            <div class="form-group">
+                                <!-- intput:Text este input Text no tendrá un nombre porque no vamos a 19:27 enviar nada a un servidor                                 -->
+                                <input type="text"  id="countryCode" class="form-control" placeholder="Código de País">
+                            </div>
+                            <div class="form-group">    <!-- .form-group  vamos a crear una 19:46 separación de forma group  -->
+                                <button class="btn btn-dark btn-block" id="w-change-btn">                
+                                    Obtener Clima
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
